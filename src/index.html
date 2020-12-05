@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apellido Segundo Parcial</title>
+
+    <script src="../js/index.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+
+       
+        <div class="container-gral">
+            <h2>ABM PERSONAS</h2>
+            <div class="container-box" id="containerPopup">
+                <!-- <div class="close-Btn" id="closePopUp">x</div> -->
+                <!-- <input hidden type="text" name="id" id="idName"/> -->
+                <div class="input-box">
+                    <label for="usrId">Id: </label>
+                    <input type="text" class="inputSinError inputError" name="id" id="id" disabled/>
+                </div>
+                <div class="input-box">
+                    <label for="usrNombre">Nombre: </label>
+                    <input type="text" class="inputSinError inputError" name="nombre" id="nombre" placeholder="Nombre"/>
+                </div>
+                <div class="input-box">
+                    <label for="usrApellido">Apellido</label> 
+                    <input type="text" class="inputSinError inputError" name="apellido" id="apellido" placeholder="Apellido"/>
+                </div>
+                <div class="input-box">
+                    <label for="usrEdad">Edad</label> 
+                    <input type="text" class="inputSinError inputError" name="edad" id="edad" placeholder="Edad"/>	
+                </div>
+                <div class="input-box">
+                    <label for="usrSexo">Sexo</label> 
+                   <!-- <input type="text" class="inputSinError inputError" name="cuatrimestre" id="cuatri" placeholder="cuatrimestre"/>-->
+                    <select class="inputSinError inputError" name="sexo" id="sexo">
+                        <option value="" disabled selected>Seleccione una opcion</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">femenino</option>
+                    </select>	
+                </div>
+                <div class="button-box">
+                    <input type="button" class="modificarBtn" id="btnSave" value="Agregar"/>
+                    <input type="button" id="btnDelete" value="Eliminar"/>
+                    <input type="button" id="btnDeleteList" value="Limpiar formulario"/>
+                </div>
+            </div>
+            <div class="container-list" id="list">
+                <!-- <div class="container-button">
+                    <input type="button" class="altaBtn" id="btAlta" value="Alta"/>
+                </div> -->
+                <div class="container-filter">
+                    <hr>
+                    <h2>Filtros</h2>
+                    <hr>
+                    <div class="filter-inputs">
+                        <div class="input-box filter">
+                            <label for="usrSexo">Filtrar por</label>
+                            <select class="inputSinError inputError" name="sexo" id="filterSex" >
+                                <option value="" disabled selected>Seleccione una opcion</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">femenino</option>
+                            </select>	
+                        </div>
+                        <div class="input-box filter">
+                            <label for="usrCant">Promedio</label> 
+                        <input type="text" class="inputSinError inputError" name="cantPuertas" id="prom" disabled/>		
+                        </div>
+                        <div class="button-box filter btn">
+                            <input type="button" class="calcularProm" id="btnProm" value="Calcular Promedio"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox-filter">
+                    <h2>Campos mostrados</h2>
+                    <hr>
+                    <label for="usrCant">Id :</label>
+                    <input type="checkbox" id="checkId" value="1">	
+                    <label for="usrCant">Nombre :</label>
+                    <input type="checkbox" id="checkNombre" value="2">	
+                    <label for="usrCant">Apellido :</label>
+                    <input type="checkbox" id="checkApellido" value="3">	
+                    <label for="usrCant">Edad : </label>
+                    <input type="checkbox" id="checkEdad" value="4">	
+                    <label for="usrSex">Sexo: </label>
+                    <input type="checkbox" id="checkSex" value="4">
+                </div>
+                <div class="table-container">
+                    <hr>
+                    <h2>Lista de Clientes</h2>
+                    <hr>
+                    <table id="tabla">
+                      <thead>
+                            <tr>
+                                <th class="columnId">Id</th>
+                                <th class="columnNombre">Nombre</th>
+                                <th class="columnApellido">Apellido</th>
+                                <th class="columnEdad">Edad</th>
+                                <th class="columnSexo">Sexo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tCuerpo">
+                    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
