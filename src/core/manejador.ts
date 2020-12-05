@@ -72,7 +72,7 @@ namespace Core {
             }
         }
 
-        private static cleanTable(){
+        static cleanTable(){
             let table = <HTMLTableElement>document.getElementById('tCuerpo');
             for(var i = 0; i < table.rows.length; i++) {
                 table.deleteRow(i);

@@ -137,6 +137,7 @@ window.addEventListener('load', function () {
     eliminarPersona();
     filterSex();
     calcularProm();
+    limpiarLista();
 });
 function validateNameInput() {
     var m = $("nombre").value;
@@ -199,6 +200,7 @@ function limpiarLista() {
     var btn = document.getElementById('btnDeleteList');
     btn === null || btn === void 0 ? void 0 : btn.addEventListener("click", function () {
         localStorage.clear();
+        ManagerEntity.cleanTable();
         cleanForm();
     });
 }

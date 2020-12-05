@@ -14,6 +14,7 @@ window.addEventListener('load', function(){
     eliminarPersona();
     filterSex();
     calcularProm();
+    limpiarLista();
 })
 
 
@@ -84,6 +85,7 @@ function limpiarLista() {
     var btn = document.getElementById('btnDeleteList');
     btn?.addEventListener("click",function () {
         localStorage.clear();
+        ManagerEntity.cleanTable();
         cleanForm();
     })
 }
